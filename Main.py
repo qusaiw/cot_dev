@@ -37,7 +37,7 @@ def main():
             continue
         my_search = DEV_CATCH.search(dev_name)
         if not my_search:
-            print "$s: unmatched name" % cot_name
+            print "%s: unmatched name" % cot_name
             continue
         # dev_specs is a tuple -> (prefix, family, infix, drive)
         dev_specs = extract(my_search)
