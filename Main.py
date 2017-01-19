@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # Written by Qusai Abu-Obaida
-
+import pprint
 import re
 
 DEV_CATCH = re.compile(r'([a-z]\d\d_)?([a-z0-9]+)(_.+)?(_\dp?\d*)')
@@ -30,7 +30,7 @@ def main():
         dev_name = item[0]
         cot_name = item[1]
         if dev_name.lower() != dev_name:
-            print "%s has lowercase letter. skipping cell"
+            print "%s has uppercase letter. skipping cell" % dev_name
             continue
         if cot_name.upper() != cot_name:
             print "%s has lowercase letters, skipping cell" % cot_name
@@ -54,4 +54,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-print final
+pprint.pprint(final)
