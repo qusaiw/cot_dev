@@ -1,3 +1,6 @@
+#!/usr/bin/env python
+# Written by Qusai Abu-Obaida
+
 import re
 
 DEV_CATCH = re.compile(r'([a-z]\d\d_)?([a-z0-9]+)(_.+)?(_\dp?\d*)')
@@ -51,3 +54,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+print final
